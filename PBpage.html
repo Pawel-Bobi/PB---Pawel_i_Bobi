@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>PB - Paweł & Bobi</title>
+        <meta charset="utf-8">
+    <style> 
+    body {background-color: rgba(17, 75, 161, 0.733);}
+    h1 {color: #000000;}
+    h2 {text-align: center;}
+    p {
+      text-align: center;
+      font-size: 30px;
+    }
+    *{
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+          outline: none;
+    }
+      body{
+          font-family: 'Poppins', sans-serif;
+      }
+      .wrapper{
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          padding: 70px 0;
+          max-width: 400px;
+          margin: 0 auto;
+      }
+      .menu,
+      .content{
+           width: 100%;
+      }
+      select{
+           width: 100%;
+           padding: 15px;
+           font-size: 16px;
+           font-weight: 700;
+           font-family: 'Poppins', sans-serif;
+           border: none;
+           border-radius: 8px;
+           border: 2px solid #3f51b5;
+           box-shadow: 0 15px 15px #000000;
+          
+      }
+      .data{
+        display: none;
+      }
+      .film{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    </head>
+    <body>
+     <marquee behavior="scroll" direction="right"><h1 style="font-size: 70px">Witamy w PB</h1></marquee>
+     <h2 style="font-size: 70px"> Piosenki PB</h2>
+     <p>Zapraszamy do słuchania</p>
+     <div class="wrapper">
+        <div class="menu">
+           <select id="name">
+              <option value="7days">7 DAYS </option>
+              <option value="aterazpatrz">A TERAZ PATRZ</option>
+              <option value="centrumswiata">CENTRUM ŚWIATA</option>
+              <option value="dalekadroga">DALEKO DROGA</option>
+              <option value="flex">FLEX</option>
+              <option value="impreza">IMPREZA</option>
+              <option value="kosmita">KOSMITA</option>
+              <option value="niewierzyli">NIE WIERZYLI</option>
+              <option value="pb_">PB</option>
+              <option value="wielkinapad">WIELKI NAPAD</option>
+              <option value="zyciacorazmniej">ŻYCIE CORAZ MNIEJ</option>
+           </select>    
+        </div>
+     </div>
+     
+    <div class="content">
+      <div id="7days" class="data"> 
+          <video controls src="7 DAYS.mp4" class="film"></video>
+        </div>
+      <div id="aterazpatrz" class="data" >  
+          <video controls src="A TERAZ PATRZ.mp4" class="film"></video>
+        </div>
+      <div id="centrumswiata" class="data">  
+          <video controls src="CENTRUM  ŚWIATA.mp4" class="film"></video>
+        </div>
+      <div id="dalekadroga" class="data"> 
+          <video controls src="DALEKO DROGA.mp4" class="film"></video>
+        </div>
+      <div id="flex" class="data">  
+          <video controls src="FLEX.MP4" class="film"></video>
+        </div>
+      <div id="impreza" class="data">   
+          <video controls src="IMPREZA.MP4" class="film"></video>
+        </div> 
+      <div id="kosmita" class="data"> 
+          <video controls src="KOSMITA.mp4" class="film"></video>
+        </div> 
+      <div id="niewierzyli" class="data">   
+          <video controls src="KOSMITA.mp4" class="film"></video>
+        </div> 
+      <div id="pb_" class="data">
+          <audio controls src="Audio WhatsApp 2023-10-13 o 17.36.55_2579ab71.mp3" class="film"></audio>
+        </div> 
+      <div id="wielkinapad" class="data">
+          <video controls src="WIELKI NAPAD (2).mp4" class="film"></video>
+        </div> 
+      <div id="zyciacorazmniej" class="data"> 
+          <video controls src="ŻYCIA CORAZ MNIEJ.mp4" class="film"></video>
+        </div> 
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+ 
+           $(document).ready(function(){
+               $("#name").on('change', function(){
+                   $(".data").hide();
+                   $("#" + $(this).val()).fadeIn(700);
+               }).change();
+           });
+   
+       
+
+    </script> 
+
+     </body>
+</html>
